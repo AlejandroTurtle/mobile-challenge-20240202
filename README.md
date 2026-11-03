@@ -9,7 +9,7 @@ Nesse desafio você deverá desenvolver um aplicativo para listar palavras em in
 [SPOILER] As instruções de entrega e apresentação do challenge estão no final deste Readme (=
 
 ### Antes de começar
- 
+
 - Considere como deadline da avaliação a partir do início do teste. Caso tenha sido convidado a realizar o teste e não seja possível concluir dentro deste período, avise a pessoa que o convidou para receber instruções sobre o que fazer.
 - Documentar todo o processo de investigação para o desenvolvimento da atividade (README.md no seu repositório); os resultados destas tarefas são tão importantes do que o seu processo de pensamento e decisões à medida que as completa, por isso tente documentar e apresentar os seus hipóteses e decisões na medida do possível.
 
@@ -18,6 +18,7 @@ Nesse desafio você deverá desenvolver um aplicativo para listar palavras em in
 - Utilize as seguintes tecnologias:
 
 #### Tecnologias (Mobile):
+
 - Nativo ou Hibrido (Flutter, Ionic, React Native, etc)
 - Estilização (Material, Semantic, etc). Ou escrever o seu próprio sob medida 👌
 - Gestão de dados (Redux, Context API, IndexedDB, SQLite, etc)
@@ -25,16 +26,18 @@ Nesse desafio você deverá desenvolver um aplicativo para listar palavras em in
 Atente-se, ao desenvolver a aplicação mobile, para conceitos de usabilidade e adeque a interface com elementos visuais para os usuários do seu sistema.
 
 #### Tecnologias (Back-End):
+
 - Firebase, Supabase, etc
 
 #### Organização:
+
 - Aplicação de padrões Clean Code
 - Validação de chamadas assíncronas para evitar travamentos
 
 ### Modelo de Dados:
 
 Conforme indicado na documentação da API, a API retorna as informações de uma palavra, tais como etimologia, sinônimos, exemplos de uso, etc. Utilize os campos indicados na documentação dos endpoints para obter os dados necessários.
- 
+
 ### Front-End:
 
 Nessa etapa você deverá desenvolver uma aplicação móvel nativa ou hibrida para consumir a API do desafio.
@@ -62,6 +65,7 @@ A API não possui endpoint com a lista de palavras. Essa lista pode ser carregad
 **Diferencial 3** - Escrever Unit Tests ou E2E Test. Escolher a melhor abordagem e biblioteca;
 
 **Diferencial 4** - Implementar login com usuário e senha e associar os favoritos e histórico ao ID do usuário, salvando essa informação em banco de dados local ou remoto
+
 ## Readme do Repositório
 
 - Deve conter o título do projeto
@@ -69,9 +73,9 @@ A API não possui endpoint com a lista de palavras. Essa lista pode ser carregad
 - Deve conter uma lista com linguagem, framework e/ou tecnologias usadas
 - Como instalar e usar o projeto (instruções)
 - Não esqueça o [.gitignore](https://www.toptal.com/developers/gitignore)
-- Se está usando github pessoal, referencie que é um challenge by coodesh:  
+- Se está usando github pessoal, referencie que é um challenge by coodesh:
 
->  This is a challenge by [Coodesh](https://coodesh.com/)
+> This is a challenge by [Coodesh](https://coodesh.com/)
 
 ## Finalização e Instruções para a Apresentação
 
@@ -79,7 +83,55 @@ A API não possui endpoint com a lista de palavras. Essa lista pode ser carregad
 2. Verifique se o Readme está bom e faça o commit final em seu repositório;
 3. Envie e aguarde as instruções para seguir. Caso o teste tenha apresentação de vídeo, dentro da tela de entrega será possível gravar após adicionar o link do repositório. Sucesso e boa sorte. =)
 
-
 ## Suporte
 
-Para tirar dúvidas sobre o processo envie uma mensagem diretamente a um especialista no chat da plataforma. 
+Para tirar dúvidas sobre o processo envie uma mensagem diretamente a um especialista no chat da plataforma.
+
+# MobileChallenge
+
+Aplicativo React Native CLI para iOS e Android, criado com React Native 0.88, React 19.3 e TypeScript.
+
+## Requisitos
+
+- Node.js 22.11 ou superior
+- JDK 17 e Android Studio com Android SDK para Android
+- Xcode e CocoaPods para iOS
+
+## Instalar e executar
+
+```sh
+yarn install
+yarn start
+```
+
+Em outro terminal, inicie a plataforma desejada:
+
+```sh
+yarn android
+yarn ios
+```
+
+Depois de clonar o projeto ou alterar dependências nativas, instale os pods do iOS:
+
+```sh
+cd ios
+bundle install
+bundle exec pod install
+```
+
+## O que já está configurado
+
+- Redux Toolkit, React Redux e hooks tipados em `src/app/`
+- Redux Persist com AsyncStorage para restaurar o estado local
+- React Navigation Native Stack com rotas tipadas em `src/navigation/`
+- Tela inicial de exemplo em `src/features/counter/`
+- Jest com o preset do React Native e React Native Testing Library
+- Mock do AsyncStorage para os testes em `jest.setup.js`
+
+## Comandos úteis
+
+```sh
+yarn lint
+yarn typecheck
+yarn test
+```
