@@ -1,13 +1,13 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { CounterScreen } from '../features/counter/CounterScreen';
-import type { RootStackParamList } from './types';
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
+import { useAuth } from '../context/AuthContext';
+import NotLoggedNavigator from './NotLoggedNavigation';
+import LoggedNavigator from './LoggedNavigation';
 
 export function RootNavigator() {
-  return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Counter" component={CounterScreen} />
-    </Stack.Navigator>
-  );
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return null;
+  }
+
+  return user ? <LoggedNavigator /> : <NotLoggedNavigator />;
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "938920681980",
+    "project_id": "mobile-challenge-47cf1",
+    "storage_bucket": "mobile-challenge-47cf1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938920681980:android:bbd1cd48b75d2ca5c7d279",
+        "android_client_info": {
+          "package_name": "com.mobilechallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938920681980-g6ae5n3lup8u69h4tvd99ie9ju3eb1o1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjSdJQxJrXrRuTHB239wpAj-SiPcYKQvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938920681980-g6ae5n3lup8u69h4tvd99ie9ju3eb1o1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
